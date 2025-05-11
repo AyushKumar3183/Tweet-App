@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+  welcome to tweet page
+{% endblock %}
+{% block content %}
+  <h1 class="text-center mt-5">Are you Sure you Want to Delete</h1>
+    <form  method="post"   class="form">
+         {% csrf_token %}
+      {{form.as_p}}
+      <button class="btn btn-danger">Delete</button>
+
+    </form>
+    <a class="btn btn-success" href="{% url 'tweetlist'%}">Cancel</a>  
+ </h2>
+
+{% endblock %}
+{% block  %}
